@@ -1,4 +1,4 @@
-# Curso de Bases de datos con PostgreSQL
+# PostgreSQL
 
 ## Pasos para levantar el proyecto
 
