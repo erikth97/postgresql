@@ -48,3 +48,10 @@ select * from country where code = 'CRI';
 
 ------------------------------------------------------------------------ INDEX
 
+SELECT
+    *
+FROM
+    COUNTRY
+WHERE
+    CONTINENT = 'Africa';
+CREATE INDEX  "country_continent" on country (continent);
