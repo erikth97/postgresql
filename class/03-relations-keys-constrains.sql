@@ -73,3 +73,13 @@ ALTER TABLE
 	
 INSERT INTO country
 		values('AFG', 'Afghanistan', 'Asia', 'Southern Asia', 652860, 1919, 40000000, 62, 69000000, NULL, 'Afghanistan', 'Totalitarian', NULL, NULL, 'AF');
+
+
+-------------------------------------------------------------------------------------- FK COUNTRYLANGUAGE
+
+ALTER TABLE countrylanguage
+	ADD CONSTRAINT fk_contry_code
+	FOREIGN KEY  ( countrycode )
+	REFERENCES country ( code )
+
+DELETE FROM country WHERE CODE = 'AFG'; // VEO QUE ME LANZA UN ERROR QUE VIOLA FK CONTRAINT
