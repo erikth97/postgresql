@@ -60,3 +60,16 @@ CREATE INDEX "country_continent" on country (continent);
 CREATE UNIQUE INDEX "unique_name_countrycode_district" ON city (name, countrycode, district);4
 
 CREATE INDEX "index_destrict" ON CITY (DISTRICT);
+
+
+------------------------------------------------------------------- FOREING KEY
+select * from country;
+select * from city;
+
+ALTER TABLE
+	ADD CONSTRAINT fk_country_code
+	FORGEIN KEY ( countrycode )
+	REFERENCES country( code ); ---- on delete cascade
+	
+INSERT INTO country
+		values('AFG', 'Afghanistan', 'Asia', 'Southern Asia', 652860, 1919, 40000000, 62, 69000000, NULL, 'Afghanistan', 'Totalitarian', NULL, NULL, 'AF');
